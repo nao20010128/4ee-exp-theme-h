@@ -16,3 +16,10 @@ clf(0);
 
 bode([sys1;sys2;sys3], 0.01, 100, ['G1';'G2';'G3']);
 xs2png(0, 'sols_bode.png');
+
+
+clf(0);
+
+nyquist([sys1;sys2;sys3], 0.01, 100, ['G1';'G2';'G3']);
+xs2png(0, 'sols_nyquist.png');
+

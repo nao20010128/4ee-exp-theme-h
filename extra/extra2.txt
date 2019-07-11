@@ -1,0 +1,21 @@
+s = %s;
+
+G1 = 10/(s * (s+1));
+
+Xpos = G1 / (1-G1);
+Xneg = G1 / (1+G1);
+
+sys1 = syslin('c', Xpos);
+sys2 = syslin('c', Xneg);
+
+clf(0);
+
+bode([sys1;sys2], 0.01, 100, ['positive feedback';'negative feedback']);
+xs2png(0, 'extra2_bode.png');
+
+
+clf(0);
+
+nyquist([sys1;sys2], 0.01, 100, ['positive feedback';'negative feedback']);
+xs2png(0, 'extra2_nyquist.png');
+

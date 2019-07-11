@@ -1,8 +1,0 @@
-s = %s
-G1 = (1 - s)/(s**2 + s + 1);
-sys1 = syslin('c', G1);
-
-clf(0);
-bode([sys1], 0.01, 100, ['G1']);
-
-xs2png(0, 'nonsmallestphase_bode.png');
