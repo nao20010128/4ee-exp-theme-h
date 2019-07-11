@@ -1,0 +1,13 @@
+s = %s
+G1 = 1 / (s + 1);
+sys1 = syslin('c', G1);
+
+G2 = s / (s + 1);
+sys2 = syslin('c', G2);
+
+
+## nyquist
+clf();
+nyquist([sys1; sys2], 0.01, 100, ['G1'; 'G2']);
+
+xs2png(0, 'fols_nyquist.png');

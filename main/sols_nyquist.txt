@@ -1,0 +1,18 @@
+s = %s;
+
+K = 1;
+wn = 1;
+
+G1 = K*wn^2/(s^2 + 2*0.5*wn*s + wn^2);
+sys1 = syslin('c', G1);
+
+G2 = K*wn^2/(s^2 + 2*1.0*wn*s + wn^2);
+sys2 = syslin('c', G2);
+
+G3 = K*wn^2/(s^2 + 2*2.0*wn*s + wn^2);
+sys3 = syslin('c', G3);
+
+clf(0);
+
+nyquist([sys1;sys2;sys3], 0.01, 100, ['G1';'G2';'G3']);
+xs2png(0, 'sols_nyquist.png');
