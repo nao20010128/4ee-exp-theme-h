@@ -12,10 +12,10 @@ sys3 = syslin('c', G3);
 clf(0);
 bode([sys1;sys2;sys3], 0.01, 100, ['G1';'G2';'G3']);
 
-xs2png(0, 'fols_bode.png');
+xs2svg(0, 'fols_bode.svg');
 
 
 clf(0);
 nyquist([sys1;sys2;sys3], 0.01, 100, ['G1';'G2';'G3']);
 
-xs2png(0, 'fols_nyquist.png');
+xs2svg(0, 'fols_nyquist.svg');

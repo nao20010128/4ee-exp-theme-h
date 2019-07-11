@@ -6,11 +6,11 @@ sys1 = syslin('c', G1);
 clf(0);
 bode([sys1], 0.01, 100, ['G1']);
 
-xs2png(0, 'sekibun_bode.png');
+xs2svg(0, 'sekibun_bode.svg');
 
 
 clf(0);
 nyquist([sys1], 0.01, 100, ['G1']);
 
-xs2png(0, 'sekibun_nyquist.png');
+xs2svg(0, 'sekibun_nyquist.svg');
 

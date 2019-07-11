@@ -5,11 +5,11 @@ sys1 = syslin('c', G1);
 clf(0);
 bode([sys1], 0.01, 100, ['G1']);
 
-xs2png(0, 'nonsmallestphase_bode.png');
+xs2svg(0, 'nonsmallestphase_bode.svg');
 
 clf(0);
 nyquist([sys1], 0.01, 100, ['G1']);
 
-xs2png(0, 'nonsmallestphase_nyquist.png');
+xs2svg(0, 'nonsmallestphase_nyquist.svg');
 
 

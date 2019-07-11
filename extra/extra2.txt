@@ -11,11 +11,11 @@ sys2 = syslin('c', Xneg);
 clf(0);
 
 bode([sys1;sys2], 0.01, 100, ['positive feedback';'negative feedback']);
-xs2png(0, 'extra2_bode.png');
+xs2svg(0, 'extra2_bode.svg');
 
 
 clf(0);
 
 nyquist([sys1;sys2], 0.01, 100, ['positive feedback';'negative feedback']);
-xs2png(0, 'extra2_nyquist.png');
+xs2svg(0, 'extra2_nyquist.svg');
 
