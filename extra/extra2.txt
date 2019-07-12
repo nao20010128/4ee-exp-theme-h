@@ -10,12 +10,12 @@ sys2 = syslin('c', Xneg);
 
 clf(0);
 
-bode([sys1;sys2], 0.01, 100, ['positive feedback';'negative feedback']);
+bode([sys2], 0.01, 100, ['negative feedback']);
 xs2svg(0, 'extra2_bode.svg');
 
 
 clf(0);
 
-nyquist([sys1;sys2], 0.01, 100, ['positive feedback';'negative feedback']);
+nyquist([sys2], 0.01, 100, ['negative feedback']);
 xs2svg(0, 'extra2_nyquist.svg');
 
